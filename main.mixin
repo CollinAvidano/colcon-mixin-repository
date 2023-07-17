@@ -1,0 +1,20 @@
+{
+    "build": {
+        "main": {
+            "cmake-args": [
+                "-GNinja",
+                "-DCMAKE_BUILD_TYPE=Debug",
+                "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+                "-DBUILD_SHARED_LIBS=ON",
+                "-DCMAKE_C_COMPILER=clang",
+                "-DCMAKE_CXX_COMPILER=clang++",
+                "-DCMAKE_CXX_FLAGS='-std=c++20 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS'",
+                "-DCMAKE_EXE_LINKER_FLAGS=-fuse-ld=mold",
+                "-DCMAKE_MODULE_LINKER_FLAGS=-fuse-ld=mold",
+                "-DCMAKE_SHARED_LINKER_FLAGS=-fuse-ld=mold",
+                "--no-warn-unused-cli",
+                "-DCGAL_DO_NOT_WARN_ABOUT_CMAKE_BUILD_TYPE=TRUE"
+            ]
+        }
+    }
+}

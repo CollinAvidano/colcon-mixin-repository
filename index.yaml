@@ -1,4 +1,5 @@
 mixin:
+  - main.mixin
   - asan.mixin
   - build-testing.mixin
   - build-type.mixin
